@@ -1,0 +1,71 @@
+﻿body{
+    padding: 0px;
+    margin: 0px;
+}
+
+.wrapper {
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: repeat(17, 1fr);
+}
+
+.item {
+    border: 1px solid black;
+}
+
+
+.item_header {
+    background-color: #219ee6;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    grid-column: 1 / span 2;
+    text-align: center;
+    line-height: 100px;
+}
+
+
+.item_content {
+    line-height: 100px;
+}
+
+p {
+    font-size: 18px;
+    height: 100px;
+    margin-left: 15px;
+}
+
+.item_input {
+    line-height: 130px;
+}
+
+input {
+    margin-left: 10px;
+    height: 30%;
+    width: 40%;
+}
+
+.Drop_List {
+    font-size: 18px;
+    margin-left: 10px;
+    height: 30%;
+    width: 40%;
+}
+
+.radio_btn {
+    width: 45px;
+    margin-right: 5px; /* Điều chỉnh khoảng cách giữa radio button và văn bản */
+}
+
+.End{
+    width: 20%;
+}
+
+.Input_dc{
+    height: 120px;
+}
+
+
+
+

@@ -1,0 +1,61 @@
+﻿@model Bai_1.Models.Register
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Style/Register.css" rel="stylesheet" />
+    <title>Login</title>
+</head>
+<body>
+        @using (Html.BeginForm("Register", "Home", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="wrapper">
+        <div class="item item_header">THÔNG TIN VỀ ĐƠN VỊ TUYỂN</div>
+
+        <div class="item item_content"><p>Tên đơn vị tuyển (*)</p></div>
+        <div class="item item_input"><p>@Html.DisplayFor(model => model.Ten_Don_Vi_Tuyen)</p></div>
+        <div class="item item_content"><p>Loại hình doanh nghiệp (*)</p></div>
+        <div class="item item_input"><p>@Html.DisplayFor(model => model.Loai_Hinh_Doanh_Nghiep)</p></div>
+        <div class="item item_content"><p>Số Lượng Nhân Viên</p></div>
+        <div class="item item_input"><p>@Html.DisplayFor(model => model.So_Luong_Nhan_Vien)</p></div>
+
+        <div class="item item_header">THÔNG TIN LIÊN HỆ</div>
+
+        <div class="item item_content"><p>Địa Chỉ (*)</p></div>
+        <div class="item item_input"><p>@Html.DisplayFor(model => model.Dia_Chi)</p></div>
+        <div class="item item_content"><p>Người liên hệ (*)</p></div>
+        <div class="item item_input"><p>@Html.DisplayFor(model => model.Nguoi_Lien_He)</p></div>
+        <div class="item item_content"><p>Số Điện Thoại (*)</p></div>
+        <div class="item item_input"><p>@Html.DisplayFor(model => model.So_Dien_Thoai)</p></div>
+        <div class="item item_content"><p>Số Fax</p></div>
+        <div class="item item_input"><p>@Html.DisplayFor(model => model.So_Dien_Thoai)</p></div>
+        <div class="item item_content"><p>Email</p></div>
+        <div class="item item_input"><p>@Html.DisplayFor(model => model.Email)</p></div>
+
+        <div class="item item_header">THÔNG TIN ĐĂNG NHẬP</div>
+
+        <div class="item item_content"><p>Tên Đăng Nhập (*)</p></div>
+        <div class="item item_input"><p>@Html.DisplayFor(model => model.Ten_Dang_Nhap)</p></div>
+        <div class="item item_content"><p>Mật Khẩu (*)</p></div>
+        <div class="item item_input"><p>@Html.DisplayFor(model => model.Mat_Khau)</p></div>
+        <div class="item item_content"><p>Xác Nhận Mật Khẩu (*)</p></div>
+        <div class="item item_input"><p>@Html.DisplayFor(model => model.Xac_Nhan_Mat_Khau)</p></div>
+
+        <div class="item item_header">NHẬN EMAIL</div>
+
+        <div class="item item_content"><p>Email</p></div>
+        <div class="item item_input"><p>@Html.DisplayFor(model => model.Email)</p></div>
+        <div class="item item_content"><p>Nhận Thư Điện Tử</p></div>
+        <div class="item item_input"><p>@Html.DisplayFor(model => model.Nhan_Thu_Dien_Tu)</p></div>
+    </div>  
+         }
+        @Html.ActionLink("Back to Home", "Index")
+</body>
+</html>
